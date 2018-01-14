@@ -9,6 +9,9 @@ const INDEX = path.join(__dirname, 'index.html');
 
 const server = express()
   .use((req, res) => res.sendFile(INDEX) )
+  .use(express.static('js'))
+  .use(express.static('knob'))
+  .use(express.static('css'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
