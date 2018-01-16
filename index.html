@@ -34,18 +34,6 @@
           </div>
         </div>
 
-      <script>
-      
-        var HOST = "wss://binaryhaven.herokuapp.com";
-        var ws = new WebSocket(HOST);
-        var el = document.getElementById('server-time');
-        
-        document.getElementById('server-ip').innerHTML = location.origin;
-
-        ws.onmessage = function (event) {
-          el.innerHTML = 'Server time: ' + event.data;
-        };
-      </script>
       
       
   
@@ -60,6 +48,23 @@
             <p>Enter your name below: </p>
   
         </div>
+
+
+
+      <script>
+      
+          var HOST = "wss://binaryhaven.herokuapp.com";
+          var ws = new WebSocket(HOST);
+          var el = document.getElementById('server-time');
+          
+          document.getElementById('server-ip').innerHTML = location.origin;
+  
+          ws.onmessage = function (event) {
+            el.innerHTML = 'Server time: ' + event.data;
+          };
+        </script>
+
+        
     <br>
     <div class="panel-body text-center">
       
