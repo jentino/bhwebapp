@@ -9,7 +9,7 @@ const INDEX = path.join(__dirname, 'index.html');
 
 const server = express()
   .set('view engine', 'ejs')
-  .use((req, res) => res.sendFile(INDEX) )
+  .use((req, res) => res.sendFile(INDEX))
   .use(express.static('js'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
