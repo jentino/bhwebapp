@@ -1,7 +1,7 @@
 
 
 $(function () {
-    current_progress = 150;
+    current_progress = 19;
 	//updateDBpbar();
 	$("#dynamic")
 	.css("width", current_progress + "%")
