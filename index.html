@@ -3,10 +3,15 @@
     <head>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+        <script src="./knob/bower_components/d3/d3.js"></script>
+        <script src="./knob/dist/ng-knob.js"></script>
     </head>
   
   <body>
     <center>
+        <div class="panel-body text-center">
+            <ui-knob value="value" options="options"></ui-knob>
+        </div>
       <u><h1 id='server-time'></h1></u>
       <u><h1 id='server-ip'></h1></u>
       <script>
@@ -35,12 +40,31 @@
   </div>
   
   <script>
-  var app = angular.module('myApp', []);
-  app.controller('myCtrl', function($scope) {
+    var app = angular.module('myApp', ['ui.knob']);
+    app.controller('myCtrl', function($scope) {
+      
       $scope.firstName= "John";
       $scope.lastName= "Doe";
-  });
+
+      $scope.value = 10;
+      $scope.profittarget = 0;
+      $scope.options = {
+        unit: "%",
+        readOnly: true,
+        subText: {
+          enabled: true,
+          text: 'Profit',
+          color: 'gray',
+          font: 'auto'
+        },
+        trackWidth: 30,
+        barWidth: 15,
+        trackColor: '#C7DDF7',
+        barColor: 'lime'
+      };
+    
+    });
   </script>
-    </center>
+  </center>
   </body>
   </html>
