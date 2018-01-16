@@ -1,8 +1,6 @@
 
 
 $(function () {
-    "use strict";
-
     current_progress = 50;
 	//updateDBpbar();
 	$("#dynamic")
