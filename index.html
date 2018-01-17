@@ -31,22 +31,18 @@
     <div class="container">
 
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
           
           <div ng-app="myApp" ng-controller="myCtrl">
-            <div>
-                
+
+            <div>                
               <u><h1 id='server-time'></h1></u>
               <u><h1 id='server-ip'></h1></u>
               <br><br>
               
               <p>Enter your name below: </p>
-        
-            </div>
-      
-      
-      
-            <script>
+              
+              <script>
             
                 var HOST = "wss://binaryhaven.herokuapp.com";
                 var ws = new WebSocket(HOST);
@@ -58,21 +54,25 @@
                   el.innerHTML = 'Server time: ' + event.data;
                 };
               </script>
-      
-              
-          <br>
-          <div class="panel-body text-center">
-            
-              <ui-knob value="value" options="options"></ui-knob>
-          </div>
-            <br>
-          
-          First Name: <input type="text" ng-model="firstName"><br>
-          Last Name: <input type="text" ng-model="lastName"><br>
-          <br>
-          Full Name: {{firstName + " " + lastName}}
         
+            </div>
+            
+            <br>
+            <div class="panel-body text-center">
+              
+                <ui-knob value="value" options="options"></ui-knob>
+            </div>
+              <br>
+            
+            First Name: <input type="text" ng-model="firstName"><br>
+            Last Name: <input type="text" ng-model="lastName"><br>
+            <br>
+            Full Name: {{firstName + " " + lastName}}
+        
+          </div>
+
         </div>
+        <div class="col-md-6">
 
         </div>
       </div>
@@ -142,7 +142,7 @@
   </center>
   <script>
     $(function () {
-      current_progress = 19;
+      current_progress = 100;
       //updateDBpbar();
       $("#dynamic")
       .css("width", current_progress + "%")
