@@ -2,7 +2,7 @@
 //version 1.1.1
 const express = require('express');
 const SocketServer = require('ws').Server;
-const  path = require('path');
+const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
@@ -10,7 +10,8 @@ const INDEX = path.join(__dirname, 'index.html');
 const server = express()
   .set('view engine', 'ejs')
   .use((req, res) => res.sendFile(INDEX))
-  .use(express.static('knob'))
+  .use(express.static('js'))
+  .use('/scripts', express.static(__dirname + '/knob/dist/'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
