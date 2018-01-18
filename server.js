@@ -10,7 +10,6 @@ const INDEX = path.join(__dirname, 'index.html');
 const server = express()
   .set('view engine', 'ejs')
   .use((req, res) => res.sendFile(INDEX))
-  .use(express.static('js'))
   .use('/scripts', express.static(__dirname + '/knob/dist/'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
