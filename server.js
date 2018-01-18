@@ -7,11 +7,13 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
 
-const server = express()
-  .set('view engine', 'ejs')
-  .use((req, res) => res.sendFile(INDEX))
-  .use(express.static('js'))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+const server = express();
+server.set('view engine', 'ejs');
+server.use((req, res) => res.sendFile(INDEX));
+server.use(express.static('js'));
+server.use('/scripts',express.static(__dirname + 'assets/'));
+server.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
