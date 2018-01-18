@@ -53,13 +53,24 @@
                 var HOST = "wss://binaryhaven.herokuapp.com";
                 var ws = new WebSocket(HOST);
                 var el = document.getElementById('server-time');
+                var  current_progress1 = 0;
                 
                 document.getElementById('server-ip').innerHTML = location.origin;
         
                 ws.onmessage = function (event) {
                   el.innerHTML = 'Server time: ' + event.data;
-                  var current_progress1 = event.data;
+                  current_progress1 = event.data;
                 };
+
+                // $(function () {
+                  current_progress = current_progress1;
+                  //updateDBpbar();
+                  $("#dynamic")
+                  .css("width", current_progress + "%")
+                  .attr("aria-valuenow", current_progress)
+                  .text(current_progress + "% Profit");
+
+                // });
               </script>
         
             </div>
@@ -145,16 +156,8 @@
       });
     </script>
     </center>
-    <script>
-      $(function () {
-        current_progress = current_progress1;
-        //updateDBpbar();
-        $("#dynamic")
-        .css("width", current_progress + "%")
-        .attr("aria-valuenow", current_progress)
-        .text(current_progress + "% Profit");
-
-      });
-    </script>
+    <!-- <script>
+      
+    </script> -->
   </body>
 </html>
