@@ -3,7 +3,6 @@
 const express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
-global._ = require('current_progress');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
@@ -26,7 +25,6 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
   wss.clients.forEach((client) => {
-    // var timenow = new Date().toTimeString();
     client.send(new Date().toTimeString());
   });
 }, 1000);
