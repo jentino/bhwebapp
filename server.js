@@ -25,8 +25,8 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
   wss.clients.forEach((client) => {
-    var d = new Date(0); // The 0 there is the key, which sets the date to the epoch
-  	d.setUTCSeconds(thetime);
+    var d = new Date(); // The 0 there is the key, which sets the date to the epoch
+  	// d.setUTCSeconds(thetime);
 	
     var globalSeconds = d.getSeconds();
   
