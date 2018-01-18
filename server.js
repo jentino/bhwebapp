@@ -25,6 +25,7 @@ wss.on('connection', (ws) => {
 
 setInterval(() => {
   wss.clients.forEach((client) => {
-    client.send((new Date().toTimeString()).getSeconds());
+    var timenow = new Date().toTimeString();
+    client.send(timenow.getSeconds());
   });
 }, 1000);
