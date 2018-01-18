@@ -31,6 +31,6 @@ setInterval(() => {
     var globalSeconds = d.getSeconds();
   
     // var timenow = new Date().toTimeString();
-    client.send(d.toTimeString());
+    client.send(globalSeconds.toTimeString());
   });
 }, 1000);
