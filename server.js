@@ -29,8 +29,11 @@ setInterval(() => {
   	// // d.setUTCSeconds(thetime);
 	
     // var globalSeconds = ;
+
+    var dt = new Date('July 20, 69 00:20:18');
+    var dt2 = (dt.getSeconds()).toTimeString();
   
     // var timenow = new Date().toTimeString();
-    client.send(new Date().toTimeString());
+    client.send(dt2);
   });
 }, 1000);
