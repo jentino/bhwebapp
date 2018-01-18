@@ -6,7 +6,7 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
-const JSFILES = path.join(__dirname, 'js/');
+const JSFILES = path.join(__dirname, 'jsfiles/');
 
 const server = express()
   .set('view engine', 'ejs')
