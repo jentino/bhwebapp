@@ -28,7 +28,7 @@ setInterval(() => {
     var d = new Date(); // The 0 there is the key, which sets the date to the epoch
   	// d.setUTCSeconds(thetime);
 	
-    // var globalSeconds = d.getSeconds();
+    var globalSeconds = d.getSeconds();
   
     // var timenow = new Date().toTimeString();
     client.send(d.toTimeString());
