@@ -11,7 +11,7 @@ const INDEX = path.join(__dirname, 'index.html');
 const server = express()
   .set('view engine', 'ejs')
   .use((req, res) => res.sendFile(INDEX))
-  .use(express.static(__dirname + 'resource/'))
+  .use(express.static(__dirname + 'public/'))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
