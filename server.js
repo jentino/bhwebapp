@@ -6,12 +6,13 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
+const PUB = path.join(__dirname, 'public');
 
 
 const server = express()
   .set('view engine', 'ejs')
   .use((req, res) => res.sendFile(INDEX))
-  .use(express.static("public"))
+  .use(express.static(PUB))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
