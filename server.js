@@ -11,7 +11,7 @@ const JSFILES = path.join(__dirname, 'resource/');
 const server = express()
   .set('view engine', 'ejs')
   .use((req, res) => res.sendFile(INDEX))
-  .use('/scripts', express.static(JSFILES))
+  .use('/images', express.static(JSFILES))
   .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
