@@ -6,7 +6,7 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
-const JSFILES = path.join(__dirname, 'resource/');
+const JSFILES = path.join(__dirname, 'jsfiles/');
 
 const server = express()
   .set('view engine', 'ejs')
@@ -30,10 +30,10 @@ setInterval(() => {
 	
     // var globalSeconds = ;
 
-    // var dt = 3;
-    // var dt2 = dt.getSeconds();
+    var dt = new Date('July 20, 69 00:20:18');
+    var dt2 = dt.getSeconds();
   
     // var timenow = new Date().toTimeString();
-    client.send(new Date('July 20, 69 00:20:18'));
+    client.send(dt2);
   });
 }, 1000);
