@@ -4,7 +4,7 @@ var express = require('express');
 const PORT = process.env.PORT || 3000;
 
 var app = express();
-app.use( express.static( "public" ) );
+app.use('/resource', express.static( "public" ) );
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
