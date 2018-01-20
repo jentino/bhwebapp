@@ -1,11 +1,15 @@
 'use strict';
 //version 1.1.1
 var express = require('express');
-const PORT = process.env.PORT || 3000;
+const path = require('path');
 
-var app = express();
-app.use('/resource', express.static( "public" ) );
-app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
+const PORT = process.env.PORT || 3000;
+const INDEX = path.join(__dirname, 'index.html');
+
+var app = express()
+.use('/resource', express.static( "public" ) )
+.use((req, res) => res.sendFile(INDEX))
+.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 
 // const express = require('express');
