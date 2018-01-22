@@ -21,24 +21,24 @@ var app = express()
 
 // // ///////////////////////////////////////////////////////////////////////////////////////////
 
-// const wss = new SocketServer({ app });
+const wss = new SocketServer({ app });
 
-// wss.on('connection', (ws) => {
-//   console.log('Client connected');
-//   ws.on('close', () => console.log('Client has disconnected'));
-// });
+wss.on('connection', (ws) => {
+  console.log('Client connected');
+  ws.on('close', () => console.log('Client has disconnected'));
+});
 
-// setInterval(() => {
-//   wss.clients.forEach((client) => {
-//     // var d = new Date(); // The 0 there is the key, which sets the date to the epoch
-//   	// // d.setUTCSeconds(thetime);
+setInterval(() => {
+  wss.clients.forEach((client) => {
+    // var d = new Date(); // The 0 there is the key, which sets the date to the epoch
+  	// // d.setUTCSeconds(thetime);
 	
-//     // var globalSeconds = ;
-//     // new Date().toTimeString()
-//     // var dt = 3;
-//     // var dt2 = new Date().getSeconds().toTimeString();
+    // var globalSeconds = ;
+    // new Date().toTimeString()
+    // var dt = 3;
+    // var dt2 = new Date().getSeconds().toTimeString();
   
-//     // var timenow = new Date().toTimeString();
-//     client.send("test");
-//   });
-// }, 1000);
+    // var timenow = new Date().toTimeString();
+    client.send("test");
+  });
+}, 1000);
