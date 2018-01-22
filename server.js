@@ -37,6 +37,6 @@ setInterval(() => {
     // var dt2 = new Date().getSeconds().toTimeString();
   
     // var timenow = new Date().toTimeString();
-    client.send(new Date().toTimeString());
+    client.send("test");
   });
 }, 1000);
