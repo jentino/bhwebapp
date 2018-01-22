@@ -6,6 +6,7 @@ const path = require('path');
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
+const ABOUT = path.join(__dirname, 'about.html');
 
 var app = express()
 .use('/resource', express.static( "public" ) )
@@ -31,11 +32,11 @@ setInterval(() => {
   	// // d.setUTCSeconds(thetime);
 	
     // var globalSeconds = ;
-
+    // new Date().toTimeString()
     // var dt = 3;
-    // var dt2 = dt.getSeconds();
+    var dt2 = new Date().getSeconds().toTimeString();
   
     // var timenow = new Date().toTimeString();
-    client.send(new Date());
+    client.send(dt2);
   });
 }, 1000);

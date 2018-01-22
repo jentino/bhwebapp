@@ -53,7 +53,7 @@
               <img src="/resource/water.jpg" width="100px" height="100px">
               
               <script>
-            
+                
                 var HOST = "wss://binaryhaven.herokuapp.com";
                 var ws = new WebSocket(HOST);
                 var el = document.getElementById('server-time');
@@ -61,7 +61,7 @@
                 document.getElementById('server-ip').innerHTML = location.origin;
         
                 ws.onmessage = function (event) {
-                  el.innerHTML = 'Server time : ' + event.data;
+                  el.innerHTML = globalone;
                 };
               </script>
         

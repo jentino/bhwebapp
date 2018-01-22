@@ -1,8 +1,9 @@
 // 'use strict'
+var globalone = "";
 
 $(function () {
-	var globalone = "HELLO WORLDIE";
-    current_progress = 89;
+	var globalone = "WORLDIE";
+    current_progress = 100;
 	//updateDBpbar();
 	$("#dynamic")
 	.css("width", current_progress + "%")
