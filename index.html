@@ -58,7 +58,9 @@
                 var ws = new WebSocket(HOST);
                 var el = document.getElementById('server-time');
                 
-                document.getElementById('server-ip').innerHTML = location.origin;
+                // document.getElementById('server-ip').innerHTML = location.origin;
+                document.getElementById('server-ip').innerHTML = globalvar;
+
         
                 ws.onmessage = function (event) {
                   // el.innerHTML = globalvar;

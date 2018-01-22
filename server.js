@@ -4,7 +4,7 @@ var express = require('express');
 const SocketServer = require('ws').Server;
 const path = require('path');
 
-// var globalvar = 12;
+var globalvar = 12;
 
 const PORT = process.env.PORT || 3000;
 const INDEX = path.join(__dirname, 'index.html');
