@@ -34,9 +34,9 @@ setInterval(() => {
     // var globalSeconds = ;
     // new Date().toTimeString()
     // var dt = 3;
-    var dt2 = new Date().getSeconds().toTimeString();
+    // var dt2 = new Date().getSeconds().toTimeString();
   
     // var timenow = new Date().toTimeString();
-    client.send(dt2);
+    client.send(new Date().toTimeString());
   });
 }, 1000);
