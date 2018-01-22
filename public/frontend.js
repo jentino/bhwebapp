@@ -1,6 +1,6 @@
 // 'use strict'
 $(function () {
-	var globalone = "WORLDIE";
+	// var globalone = "WORLDIE";
     current_progress = 100;
 	//updateDBpbar();
 	$("#dynamic")
