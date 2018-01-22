@@ -17,14 +17,14 @@ var app = express()
 //   // .set('view engine', 'ejs')
 
 
-// ///////////////////////////////////////////////////////////////////////////////////////////
+// // ///////////////////////////////////////////////////////////////////////////////////////////
 
-const wss = new SocketServer({ app });
+// const wss = new SocketServer({ app });
 
-wss.on('connection', (ws) => {
-  console.log('Client connected');
-  ws.on('close', () => console.log('Client has disconnected'));
-});
+// wss.on('connection', (ws) => {
+//   console.log('Client connected');
+//   ws.on('close', () => console.log('Client has disconnected'));
+// });
 
 // setInterval(() => {
 //   wss.clients.forEach((client) => {
