@@ -2,7 +2,7 @@
 var globalone = "";
 
 $(function () {
-	var globalone = "WORLDIE";
+	globalone = "WORLDIE";
     current_progress = 100;
 	//updateDBpbar();
 	$("#dynamic")
