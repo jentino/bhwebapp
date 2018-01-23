@@ -3,25 +3,14 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hello Bulma!</title>
-    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <script defer src="//use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
-     <script src="/resource/frontend.js"></script> 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <!-- <script src="/resource/frontend.js"></script>
-     -->
-    <script src="/resource/d3.js"></script>
-    <script src="/resource/ng-knob.js"></script> 
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-    
-
-    <style>
-      .container {
-        margin: 0 auto;
-        max-width: 380px;
-        position: relative;
-      }
-    </style>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/d3/4.12.2/d3.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ng-knob/0.1.3/ng-knob.js"></script> -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/resource/frontend.js"></script>
+    <script src="/resource/d3.js"></script>
+    <script src="/resource/ng-knob.js"></script>
   </head>
   <body>
 
@@ -30,6 +19,57 @@
           <ui-knob value="value" options="options"></ui-knob>
                      ----- <br>
                                  </div>  
+
+
+
+                                 <div class="row">
+                                    <div class="col-md-6">
+                                      
+                                      <div ng-app="myApp" ng-controller="myCtrl">
+                            
+                                        <div>                
+                                          <u><p id='server-time'></p></u>
+                                          <p id='server-ip'></p>
+                                          <br><br>
+                                          
+                                          <h1>testing .. </h1>
+                            
+                                          <img src="/resource/water.jpg" width="100px" height="100px">
+                                          
+                                          <script>
+                                            var HOST = "wss://binaryhaven.herokuapp.com";
+                                            var ws = new WebSocket(HOST);
+                                            var el = document.getElementById('server-time');
+                                            
+                                            // document.getElementById('server-ip').innerHTML = location.origin;
+                                            document.getElementById('server-ip').innerHTML = globalvar;
+                            
+                                    
+                                            ws.onmessage = function (event) {
+                                              // el.innerHTML = globalvar;
+                                            };
+                                          </script>
+                                    
+                                        </div>
+                            
+                                        <br>
+                                          
+                                            <ui-knob value="value" options="options"></ui-knob>
+                                        
+                                          <br>
+                                        
+                                        First Name: <input type="text" ng-model="firstName"><br>
+                                        Last Name: <input type="text" ng-model="lastName"><br>
+                                        <br>
+                                        Full Name: {{firstName + " " + lastName}}
+                                    
+                                      </div>
+                            
+                                    </div>
+                                    <div class="col-md-6">
+                            
+                                    </div>
+                                  </div>
 <!-- 
                                  
       <div class="container">
