@@ -15,61 +15,8 @@
   <body>
 
       <div ng-app="myApp" ng-controller="myCtrl">
-          ----- <br>
           <ui-knob value="value" options="options"></ui-knob>
-                     ----- <br>
                                  </div>  
-
-
-
-                                 <div class="row">
-                                    <div class="col-md-6">
-                                      
-                                      <div ng-app="myApp" ng-controller="myCtrl">
-                            
-                                        <div>                
-                                          <u><p id='server-time'></p></u>
-                                          <p id='server-ip'></p>
-                                          <br><br>
-                                          
-                                          <h1>testing .. </h1>
-                            
-                                          <img src="/resource/water.jpg" width="100px" height="100px">
-                                          
-                                          <script>
-                                            var HOST = "wss://binaryhaven.herokuapp.com";
-                                            var ws = new WebSocket(HOST);
-                                            var el = document.getElementById('server-time');
-                                            
-                                            // document.getElementById('server-ip').innerHTML = location.origin;
-                                            document.getElementById('server-ip').innerHTML = globalvar;
-                            
-                                    
-                                            ws.onmessage = function (event) {
-                                              // el.innerHTML = globalvar;
-                                            };
-                                          </script>
-                                    
-                                        </div>
-                            
-                                        <br>
-                                          
-                                            <ui-knob value="value" options="options"></ui-knob>
-                                        
-                                          <br>
-                                        
-                                        First Name: <input type="text" ng-model="firstName"><br>
-                                        Last Name: <input type="text" ng-model="lastName"><br>
-                                        <br>
-                                        Full Name: {{firstName + " " + lastName}}
-                                    
-                                      </div>
-                            
-                                    </div>
-                                    <div class="col-md-6">
-                            
-                                    </div>
-                                  </div>
 <!-- 
                                  
       <div class="container">
