@@ -4,11 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Hello Bulma!</title>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <script defer src="//use.fontawesome.com/releases/v5.0.0/js/all.js"></script>
-    <!-- <script src="/resource/frontend.js"></script> -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+     <script src="/resource/frontend.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+    <!-- <script src="/resource/frontend.js"></script>
+     -->
     <script src="/resource/d3.js"></script>
     <script src="/resource/ng-knob.js"></script> 
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
@@ -26,10 +27,10 @@
 
       <div ng-app="myApp" ng-controller="myCtrl">
           ----- <br>
-                               <ui-knob value="value" options="options"></ui-knob>
+          <ui-knob value="value" options="options"></ui-knob>
                      ----- <br>
                                  </div>  
-
+<!-- 
                                  
       <div class="container">
           <div class="notification">
@@ -61,35 +62,35 @@
                   </footer>
                 </div>
           </div>
-      </div>
+      </div> -->
 
       <script>
-          var app = angular.module('myApp', ['ui.knob']);
-          app.controller('myCtrl', function($scope) {
-            
-            // $scope.firstName= "Jenty";
-            // $scope.lastName= "Mepa";
-    
-            $scope.value = 10;
-    
-            // $scope.profittarget = 70;
-    
-            $scope.options = {
-              unit: "%",
-              readOnly: true,
-              subText: {
-                enabled: true,
-                text: 'Profit',
-                color: 'gray',
-                font: 'auto'
-              },
-              trackWidth: 30,
-              barWidth: 15,
-              trackColor: '#C7DDF7',
-              barColor: 'lime'
-            };
-          });
-        </script>
+      var app = angular.module('myApp', ['ui.knob']);
+      app.controller('myCtrl', function($scope) {
+        
+        // $scope.firstName= "Jenty";
+        // $scope.lastName= "Mepa";
+
+        $scope.value = 10;
+
+        // $scope.profittarget = 70;
+
+        $scope.options = {
+          unit: "%",
+          readOnly: true,
+          subText: {
+            enabled: true,
+            text: 'Profit',
+            color: 'gray',
+            font: 'auto'
+          },
+          trackWidth: 30,
+          barWidth: 15,
+          trackColor: '#C7DDF7',
+          barColor: 'lime'
+        };
+      });
+    </script>
 
   </body>
 </html>
