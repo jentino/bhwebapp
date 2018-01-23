@@ -13,14 +13,14 @@
     
 
     <style>
-    .container {
-    margin: 0 auto;
-    max-width: 380px;
-    position: relative;
-}
-</style>
+      .container {
+        margin: 0 auto;
+        max-width: 380px;
+        position: relative;
+      }
+    </style>
   </head>
-  <body ng-app="myApp" ng-controller="myCtrl">
+  <body>
       <div class="container">
           <div class="notification">
               <div class="card">
@@ -36,9 +36,12 @@
                   </header>
                   <div class="card-content">
                     <div class="content">
-                     ----- <br>
+                        <div ng-app="myApp" ng-controller="myCtrl">
+ ----- <br>
                       <ui-knob value="value" options="options"></ui-knob>
             ----- <br>
+                        </div>  
+                    
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
                       <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
                       <br>
