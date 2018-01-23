@@ -1,0 +1,50 @@
+/*
+ * The Typekit service used to deliver this font or fonts for use on websites
+ * is provided by Adobe and is subject to these Terms of Use
+ * http://www.adobe.com/products/eulas/tou_typekit. For font license
+ * information, see the list below.
+ *
+ * museo-sans:
+ *   - http://typekit.com/eulas/00000000000000000000e800
+ *   - http://typekit.com/eulas/00000000000000000000e7fe
+ *   - http://typekit.com/eulas/00000000000000000000e803
+ *   - http://typekit.com/eulas/00000000000000000000e805
+ *   - http://typekit.com/eulas/00000000000000000000e807
+ *
+ * © 2009-2018 Adobe Systems Incorporated. All Rights Reserved.
+ */
+/*{"last_published":"2018-01-11 14:13:23 UTC"}*/
+
+@import url("https://p.typekit.net/p.css?s=1&k=aux0ptv&ht=tk&f=2003.2005.2007.2009.2011&a=752873&app=typekit&e=css");
+
+@font-face {
+font-family:"museo-sans";
+src:url("https://use.typekit.net/af/5496d3/00000000000000000000e800/27/l?subset_id=1&fvd=n1&v=3") format("woff2"),url("https://use.typekit.net/af/5496d3/00000000000000000000e800/27/d?subset_id=1&fvd=n1&v=3") format("woff"),url("https://use.typekit.net/af/5496d3/00000000000000000000e800/27/a?subset_id=1&fvd=n1&v=3") format("opentype");
+font-style:normal;font-weight:100;
+}
+
+@font-face {
+font-family:"museo-sans";
+src:url("https://use.typekit.net/af/ee3564/00000000000000000000e7fe/27/l?subset_id=1&fvd=n3&v=3") format("woff2"),url("https://use.typekit.net/af/ee3564/00000000000000000000e7fe/27/d?subset_id=1&fvd=n3&v=3") format("woff"),url("https://use.typekit.net/af/ee3564/00000000000000000000e7fe/27/a?subset_id=1&fvd=n3&v=3") format("opentype");
+font-style:normal;font-weight:300;
+}
+
+@font-face {
+font-family:"museo-sans";
+src:url("https://use.typekit.net/af/7b268b/00000000000000000000e803/27/l?subset_id=1&fvd=n5&v=3") format("woff2"),url("https://use.typekit.net/af/7b268b/00000000000000000000e803/27/d?subset_id=1&fvd=n5&v=3") format("woff"),url("https://use.typekit.net/af/7b268b/00000000000000000000e803/27/a?subset_id=1&fvd=n5&v=3") format("opentype");
+font-style:normal;font-weight:500;
+}
+
+@font-face {
+font-family:"museo-sans";
+src:url("https://use.typekit.net/af/47e413/00000000000000000000e805/27/l?subset_id=1&fvd=n7&v=3") format("woff2"),url("https://use.typekit.net/af/47e413/00000000000000000000e805/27/d?subset_id=1&fvd=n7&v=3") format("woff"),url("https://use.typekit.net/af/47e413/00000000000000000000e805/27/a?subset_id=1&fvd=n7&v=3") format("opentype");
+font-style:normal;font-weight:700;
+}
+
+@font-face {
+font-family:"museo-sans";
+src:url("https://use.typekit.net/af/959635/00000000000000000000e807/27/l?subset_id=1&fvd=n9&v=3") format("woff2"),url("https://use.typekit.net/af/959635/00000000000000000000e807/27/d?subset_id=1&fvd=n9&v=3") format("woff"),url("https://use.typekit.net/af/959635/00000000000000000000e807/27/a?subset_id=1&fvd=n9&v=3") format("opentype");
+font-style:normal;font-weight:900;
+}
+
+.tk-museo-sans { font-family: "museo-sans",sans-serif; }

@@ -9,7 +9,7 @@ const INDEX = path.join(__dirname, 'index.html');
 // const ABOUT = path.join(__dirname, 'about.html');
 
 var app = express()
-.use('/resource', express.static( "public" ) )
+.use('/resource', express.static( "assets" ) )
 .use((req, res) => res.sendFile(INDEX))
 .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
