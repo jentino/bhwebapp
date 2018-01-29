@@ -12,7 +12,7 @@ const server = express()
   .set('view engine', 'ejs')
   .use((req, res) => res.sendFile(INDEX))
   .use('/scripts', express.static(JSFILES))
-  .listen(PORT, () => console.log(`Listening on ${ PORT }`));
+  .listen(PORT, () => console.log(`Listening now on ${ PORT }`));
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 
