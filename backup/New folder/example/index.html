@@ -160,7 +160,7 @@
 								</div>
 								<div class="dot-1 invis" style="left:0%;"><small>ICO Stage I</small></div>
 								<div class="dot-2" style="left:50%;"><small>ICO stage II</small></div>
-								<span class="progress-bar-value" id="progress-ico-bar">142 803 661 / 275 000 000 <strong>CHP</strong></span>
+								<span class="progress-bar-value" id="progress-ico-bark"><strong>78%</strong></span>
 								<i>Ends 26 Jan</i>
 							</div>
 						</div>
@@ -273,7 +273,8 @@
 									if (tokensSoldICO >= totalTotalICOWithoutPreSupply * 0.5)
 										$('#chpPrice').html('1 ETH = 3,500 CHP');
 									$('#progress-ico').css({
-										'width': tokensSoldICO / totalTotalICOWithoutPreSupply * 100 + '%'
+										// 'width': tokensSoldICO / totalTotalICOWithoutPreSupply * 100 + '%'
+										'width': 34 + '%'
 									});
 									$('#progress-ico-bar').html(numberWithDelim(Math.floor(tokensSoldICO), " ") + ' / ' + numberWithDelim(totalTotalICOWithoutPreSupply, " ") + ' <strong>CHP</strong>');
 									getTournamentInfo();
