@@ -31,18 +31,21 @@ $(function () {
     connection.onmessage = function (message) {
         try {
             var json = JSON.parse(message.data);
+            timer.text(json.data);
         }catch (e) {
             console.log('Invalid JSON: ', message.data);
         return;
         }
         
-        if (json.type === 'timer') { 
-            timer.text(json.data);
-        }
 
-        if (json.type === 'masterbalance') { 
-            status.text("$"+json.data);
-        }
+
+        // if (json.type === 'timer') { 
+        //     timer.text(json.data);
+        // }
+
+        // if (json.type === 'masterbalance') { 
+        //     status.text("$"+json.data);
+        // }
     };
 
     setInterval(function() {
