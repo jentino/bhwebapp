@@ -1,16 +1,21 @@
 {
-  "name": "justsayyes",
-  "version": "5.5.6",
-  "description": "first websocket",
-  "main": "server.js",
+  "name": "websockets-vanilla",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.2.0"
+  },
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "websocket": "^1.0.25"
-  },
-  "devDependencies": {}
+    "bufferutil": "1.2.1",
+    "express": "4.13.4",
+    "utf-8-validate": "1.2.1",
+    "ws": "1.1.0"
+  }
 }
