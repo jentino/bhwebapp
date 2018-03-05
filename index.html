@@ -1,18 +1,13 @@
-<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>WebSockets - Simple chat</title>
-    <style>
-    * { 
-        font-family:tahoma; 
-        font-size:12px; 
-        padding-top:20px;
-        margin:0px;}
-   
-  </style>
-  </head>
   <body>
-       testing 1 2 3
+    <p id='server-time'></p>
+    <script>
+      var HOST = location.origin.replace(/^http/, 'ws')
+      var ws = new WebSocket(HOST);
+      var el = document.getElementById('server-time');
+      ws.onmessage = function (event) {
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+    </script>
   </body>
 </html>
