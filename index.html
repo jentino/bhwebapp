@@ -1,4 +1,30 @@
 <html>
+  <head>
+    
+		<script type="text/javascript" src="frontend.js"></script>4
+    </head>
+  </ead>
+  <body>
+    <div>
+        Status: <p id='status'></p><br>
+        Server Time: <p id='servertime'></p>
+    </div>
+   
+    <script>
+      // var HOST = location.origin.replace(/^http/, 'ws')
+      // var ws = new WebSocket(HOST);
+      // var el = document.getElementById('servertime');
+      ws.onmessage = function (event) {
+        el.innerHTML = 'Server time: ' + event.data;
+      };
+    </script>
+  </body>
+</html>
+
+
+
+
+<!-- <html>
   <body>
     <p id='server-time'></p>
     <script>
@@ -10,4 +36,4 @@
       };
     </script>
   </body>
-</html>
+</html> -->
