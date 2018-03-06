@@ -38,7 +38,8 @@ $(function () {
         }
         
 
-
+        timer.text(json.data);
+        
         // if (json.type === 'timer') { 
         //     timer.text(json.data);
         // }
